@@ -1,0 +1,146 @@
+versioninfo
+{
+	"editorversion" "400"
+	"editorbuild" "9672"
+	"mapversion" "8"
+	"formatversion" "100"
+	"prefab" "0"
+}
+visgroups
+{
+}
+viewsettings
+{
+	"bSnapToGrid" "1"
+	"bShowGrid" "1"
+	"bShowLogicalGrid" "0"
+	"nGridSpacing" "8"
+	"bShow3DGrid" "0"
+}
+world
+{
+	"id" "1"
+	"mapversion" "8"
+	"classname" "worldspawn"
+	"detailmaterial" "detail/detailsprites"
+	"detailvbsp" "detail.vbsp"
+	"maxblobcount" "250"
+	"maxpropscreenwidth" "-1"
+	"skyname" "sky_black_nofog"
+}
+entity
+{
+	"id" "2"
+	"classname" "game_text"
+	"channel" "3"
+	"color" "255 255 255"
+	"color2" "205 205 205"
+	"effect" "2"
+	"fadein" ".06"
+	"fadeout" "0.5"
+	"fxtime" ".5"
+	"holdtime" "5"
+	"message" "$chapter_subtitle"
+	"spawnflags" "1"
+	"targetname" "@chapter_subtitle_text"
+	"x" "-1"
+	"y" ".6"
+	"origin" "-16 0 -24"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 1500]"
+	}
+}
+entity
+{
+	"id" "4"
+	"classname" "game_text"
+	"channel" "2"
+	"color" "255 255 255"
+	"color2" "205 205 205"
+	"effect" "2"
+	"fadein" ".06"
+	"fadeout" "0.5"
+	"fxtime" ".5"
+	"holdtime" "5"
+	"message" "$chapter_title"
+	"spawnflags" "1"
+	"targetname" "@chapter_title_text"
+	"x" "-1"
+	"y" ".55"
+	"origin" "-16 0 0"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 1500]"
+	}
+}
+entity
+{
+	"id" "14"
+	"classname" "func_instance_parms"
+	"parm1" "$chapter_title string"
+	"parm2" "$chapter_subtitle string"
+	"spawnflags" "1"
+	"origin" "16 0 8"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 1500]"
+	}
+}
+entity
+{
+	"id" "33"
+	"classname" "func_instance_io_proxy"
+	"spawnflags" "1"
+	"targetname" "Proxyio"
+	connections
+	{
+		"OnProxyRelay" "chapter_relayTrigger0-1"
+	}
+	"origin" "16 0 -8"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 1500]"
+	}
+}
+entity
+{
+	"id" "42"
+	"classname" "logic_relay"
+	"spawnflags" "0"
+	"StartDisabled" "0"
+	"targetname" "chapter_relay"
+	connections
+	{
+		"OnTrigger" "@chapter_title_textDisplay0-1"
+		"OnTrigger" "@chapter_subtitle_textDisplay0.5-1"
+	}
+	"origin" "-16 0 24"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 1500]"
+	}
+}
+cameras
+{
+	"activecamera" "-1"
+}
+cordons
+{
+	"active" "0"
+}
